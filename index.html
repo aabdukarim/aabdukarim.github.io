@@ -27,28 +27,54 @@
         </div>
     </header>
 
+    <section id="about" class="about">
+        <div class="container">
+            <h2>👋 About Me</h2>
+            <p>Hi, I'm Ali — a Site Reliability Engineer and Full Stack Developer who thrives at the intersection of automation, infrastructure, and clean, intuitive software design. I'm driven by curiosity, creativity, and a strong belief in the power of engineering to solve real-world problems at scale.</p>
+            <p>In my role as an SRE, I specialize in Infrastructure as Code (IaC), multi-cloud architecture, and automation tooling to build reliable, secure, and scalable systems. Whether it's reducing deployment friction, hardening authentication workflows, or leading cross-cloud initiatives across GCP, AWS, Azure, and IBM — I'm passionate about making infrastructure better, smarter, and safer.</p>
+            <p>On the development side, I bring full stack experience with Python, Django, React, and TypeScript, creating platforms that are both technically robust and user-friendly. From backend APIs to clean UI interfaces, I enjoy building software that just works — and works well.</p>
+            <p>I love mentoring, sharing knowledge, and contributing to collaborative engineering cultures. Whether guiding teammates through large-scale projects, or supporting org-wide deployment practices, I strive to be a reliable and positive force on every team I join.</p>
+            <p>Above all, I stay curious. I'm constantly learning — exploring cloud-native architectures, E2E testing frameworks, AI integration, and emerging DevOps trends. Every day is a new chance to improve, experiment, and ship something better than yesterday.</p>
+            <p>Let's build great things together.</p>
+        </div>
+    </section>
+
     <section id="experience" class="experience">
         <div class="container">
             <h2>Work Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>Senior DevOps Engineer</h3>
-                    <p class="company">Tech Solutions Inc.</p>
-                    <p class="duration">2020 - Present</p>
+                    <h3>Site Reliability Engineer III</h3>
+                    <p class="company">Box</p>
+                    <p class="duration sre-iii-duration"></p>
+                    <p class="location">United States · Remote</p>
                     <ul>
-                        <li>Led cloud infrastructure automation projects</li>
-                        <li>Implemented CI/CD pipelines</li>
-                        <li>Managed multi-cloud environments</li>
+                        <li>Specialized in building reliable, scalable, and secure cloud infrastructure through automation and IaC.</li>
+                        <li>Delivered secure, automated IaC pipelines for GCP, AWS, Azure, and IBM Cloud.</li>
+                        <li>Built and maintained Terraform modules, Terragrunt wrappers, and CI/CD workflows.</li>
+                        <li>Designed a next-gen E2E testing framework for infrastructure changes.</li>
+                        <li>Mentored junior engineers and improved developer experience and operational resilience.</li>
                     </ul>
+                    <p><strong>Major Contributions:</strong></p>
+                    <ul>
+                        <li>Led Azure and AWS onboarding with enhanced authentication and secure rollout patterns.</li>
+                        <li>Extended IAC pipelines to support dynamic pre-merge validation and faster feedback loops.</li>
+                        <li>Developed service feature for test visualization to make IaC changes more transparent.</li>
+                        <li>Championed documentation and support in public slack channels.</li>
+                    </ul>
+                    <p><strong>Tools & Technologies:</strong> Terraform, Terragrunt, IAC Atlantis, GCP, AWS, Azure, IBM Cloud, Docker, Kubernetes, Ansible, Puppet, Python, Django, React, TypeScript, GitHub Actions, CI/CD pipelines.</p>
                 </div>
                 <div class="timeline-item">
-                    <h3>DevOps Engineer</h3>
-                    <p class="company">Cloud Innovators</p>
-                    <p class="duration">2016 - 2020</p>
-                    <ul>
-                        <li>Developed automation scripts for cloud deployments</li>
-                        <li>Optimized system performance and reliability</li>
-                    </ul>
+                    <h3>Site Reliability Engineer II</h3>
+                    <p class="company">Box</p>
+                    <p class="duration sre-ii-duration"></p>
+                    <p class="location">Redwood City, CA</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>DevOps Consultant</h3>
+                    <p class="company">Taos, an IBM Company</p>
+                    <p class="duration devops-consultant-duration"></p>
+                    <p class="location">San Francisco Bay Area</p>
                 </div>
             </div>
         </div>
@@ -116,5 +142,30 @@
             <p>&copy; 2024 DevOps Engineer. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function calculateDuration(startDate) {
+            const start = new Date(startDate);
+            const now = new Date();
+            const years = now.getFullYear() - start.getFullYear();
+            const months = now.getMonth() - start.getMonth();
+            return `${years} yrs ${months} mos`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const experiences = [
+                { selector: '.sre-iii-duration', startDate: '2022-03-01' },
+                { selector: '.sre-ii-duration', startDate: '2019-08-01' },
+                { selector: '.devops-consultant-duration', startDate: '2018-06-01' }
+            ];
+
+            experiences.forEach(exp => {
+                const element = document.querySelector(exp.selector);
+                if (element) {
+                    element.textContent = calculateDuration(exp.startDate);
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
