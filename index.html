@@ -30,12 +30,14 @@
     <section id="about" class="about">
         <div class="container">
             <h2>👋 About Me</h2>
-            <p>Hi, I'm Ali — a Site Reliability Engineer and Full Stack Developer who thrives at the intersection of automation, infrastructure, and clean, intuitive software design. I'm driven by curiosity, creativity, and a strong belief in the power of engineering to solve real-world problems at scale.</p>
-            <p>In my role as an SRE, I specialize in Infrastructure as Code (IaC), multi-cloud architecture, and automation tooling to build reliable, secure, and scalable systems. Whether it's reducing deployment friction, hardening authentication workflows, or leading cross-cloud initiatives across GCP, AWS, Azure, and IBM — I'm passionate about making infrastructure better, smarter, and safer.</p>
-            <p>On the development side, I bring full stack experience with Python, Django, React, and TypeScript, creating platforms that are both technically robust and user-friendly. From backend APIs to clean UI interfaces, I enjoy building software that just works — and works well.</p>
-            <p>I love mentoring, sharing knowledge, and contributing to collaborative engineering cultures. Whether guiding teammates through large-scale projects, or supporting org-wide deployment practices, I strive to be a reliable and positive force on every team I join.</p>
-            <p>Above all, I stay curious. I'm constantly learning — exploring cloud-native architectures, E2E testing frameworks, AI integration, and emerging DevOps trends. Every day is a new chance to improve, experiment, and ship something better than yesterday.</p>
-            <p>Let's build great things together.</p>
+            <div class="about-content">
+                <p>Hi, I'm Ali — a Site Reliability Engineer and Full Stack Developer who thrives at the intersection of automation, infrastructure, and clean, intuitive software design. I'm driven by curiosity, creativity, and a strong belief in the power of engineering to solve real-world problems at scale.</p>
+                <p>In my role as an SRE, I specialize in Infrastructure as Code (IaC), multi-cloud architecture, and automation tooling to build reliable, secure, and scalable systems. Whether it's reducing deployment friction, hardening authentication workflows, or leading cross-cloud initiatives across GCP, AWS, Azure, and IBM — I'm passionate about making infrastructure better, smarter, and safer.</p>
+                <p>On the development side, I bring full stack experience with Python, Django, React, and TypeScript, creating platforms that are both technically robust and user-friendly. From backend APIs to clean UI interfaces, I enjoy building software that just works — and works well.</p>
+                <p>I love mentoring, sharing knowledge, and contributing to collaborative engineering cultures. Whether guiding teammates through large-scale projects, or supporting org-wide deployment practices, I strive to be a reliable and positive force on every team I join.</p>
+                <p>Above all, I stay curious. I'm constantly learning — exploring cloud-native architectures, E2E testing frameworks, AI integration, and emerging DevOps trends. Every day is a new chance to improve, experiment, and ship something better than yesterday.</p>
+                <p>Let's build great things together.</p>
+            </div>
         </div>
     </section>
 
@@ -46,7 +48,7 @@
                 <div class="timeline-item">
                     <h3>Site Reliability Engineer III</h3>
                     <p class="company">Box</p>
-                    <p class="duration sre-iii-duration"></p>
+                    <p class="duration">Mar 2022 - Present</p>
                     <p class="location">United States · Remote</p>
                     <ul>
                         <li>Specialized in building reliable, scalable, and secure cloud infrastructure through automation and IaC.</li>
@@ -55,26 +57,28 @@
                         <li>Designed a next-gen E2E testing framework for infrastructure changes.</li>
                         <li>Mentored junior engineers and improved developer experience and operational resilience.</li>
                     </ul>
-                    <p><strong>Major Contributions:</strong></p>
-                    <ul>
-                        <li>Led Azure and AWS onboarding with enhanced authentication and secure rollout patterns.</li>
-                        <li>Extended IAC pipelines to support dynamic pre-merge validation and faster feedback loops.</li>
-                        <li>Developed service feature for test visualization to make IaC changes more transparent.</li>
-                        <li>Championed documentation and support in public slack channels.</li>
-                    </ul>
-                    <p><strong>Tools & Technologies:</strong> Terraform, Terragrunt, IAC Atlantis, GCP, AWS, Azure, IBM Cloud, Docker, Kubernetes, Ansible, Puppet, Python, Django, React, TypeScript, GitHub Actions, CI/CD pipelines.</p>
                 </div>
                 <div class="timeline-item">
                     <h3>Site Reliability Engineer II</h3>
                     <p class="company">Box</p>
-                    <p class="duration sre-ii-duration"></p>
+                    <p class="duration">Aug 2019 - Mar 2022</p>
                     <p class="location">Redwood City, CA</p>
+                    <ul>
+                        <li>Implemented cloud solutions to enhance system reliability and performance.</li>
+                        <li>Collaborated with cross-functional teams to streamline deployment processes.</li>
+                        <li>Developed monitoring tools to ensure system uptime and efficiency.</li>
+                    </ul>
                 </div>
                 <div class="timeline-item">
                     <h3>DevOps Consultant</h3>
                     <p class="company">Taos, an IBM Company</p>
-                    <p class="duration devops-consultant-duration"></p>
+                    <p class="duration">Jun 2018 - Aug 2019</p>
                     <p class="location">San Francisco Bay Area</p>
+                    <ul>
+                        <li>Advised clients on best practices for cloud infrastructure and automation.</li>
+                        <li>Designed and implemented CI/CD pipelines to improve software delivery.</li>
+                        <li>Provided training and support for DevOps tools and methodologies.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -139,33 +143,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 DevOps Engineer. All rights reserved.</p>
+            <p>&copy; 2024 AAbdukarim DevOps Engineer.</p>
         </div>
     </footer>
-
-    <script>
-        function calculateDuration(startDate) {
-            const start = new Date(startDate);
-            const now = new Date();
-            const years = now.getFullYear() - start.getFullYear();
-            const months = now.getMonth() - start.getMonth();
-            return `${years} yrs ${months} mos`;
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const experiences = [
-                { selector: '.sre-iii-duration', startDate: '2022-03-01' },
-                { selector: '.sre-ii-duration', startDate: '2019-08-01' },
-                { selector: '.devops-consultant-duration', startDate: '2018-06-01' }
-            ];
-
-            experiences.forEach(exp => {
-                const element = document.querySelector(exp.selector);
-                if (element) {
-                    element.textContent = calculateDuration(exp.startDate);
-                }
-            });
-        });
-    </script>
 </body>
-</html> 
+</html>
